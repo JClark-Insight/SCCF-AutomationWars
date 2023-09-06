@@ -20,4 +20,4 @@ jobs:
         branch: exception-test
         title: Automatically created PR
         body: Changes have been detected in the feature branch.
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN_GITHUB }}
