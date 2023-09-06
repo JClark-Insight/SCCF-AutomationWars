@@ -1,0 +1,23 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - feature-branch
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create PR
+      uses: peter-evans/create-pull-request@v3
+      with:
+        base: main
+        head: feature-branch
+        title: Automatically created PR
+        body: Changes have been detected in the feature branch.
+        token: ${{ secrets.GITHUB_TOKEN }}
