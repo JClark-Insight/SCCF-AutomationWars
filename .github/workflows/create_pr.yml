@@ -17,7 +17,7 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         base: main
-        head: exception-test
+        branch: exception-test
         title: Automatically created PR
         body: Changes have been detected in the feature branch.
         token: ${{ secrets.GITHUB_TOKEN }}
