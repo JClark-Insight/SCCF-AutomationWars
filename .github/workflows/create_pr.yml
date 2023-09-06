@@ -3,7 +3,7 @@ name: Create Pull Request
 on:
   push:
     branches:
-      - feature-branch
+      - exception-handling
 
 jobs:
   create_pr:
@@ -17,7 +17,7 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         base: main
-        head: feature-branch
+        head: exception-handling
         title: Automatically created PR
         body: Changes have been detected in the feature branch.
         token: ${{ secrets.GITHUB_TOKEN }}
